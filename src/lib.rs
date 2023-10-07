@@ -139,7 +139,7 @@ pub type BorrowedSymbol<'a> = Symbol<&'a [u8]>;
 pub struct Symbol<T> {
     raw: T,
     substitutions: subs::SubstitutionTable,
-    parsed: ast::MangledName,
+    pub parsed: ast::MangledName,
 }
 
 impl<T> Symbol<T>
